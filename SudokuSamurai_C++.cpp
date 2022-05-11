@@ -1,75 +1,10 @@
-/*
-------------------------------------------------------------------------
-Nombres: Jesus David
-Apellido: Machado Castillo
-Cedula: 28553080
-Programacion I
-Proyecto III
-Solucionador de Sudoku Samurai
-Lenguaje C++
-------------------------------------------------------------------------
-                                  _______
-                           _,,ad8888888888bba,_
-                        ,ad88888I888888888888888ba,
-                      ,88888888I88888888888888888888a,
-                    ,d888888888I8888888888888888888888b,
-                   d88888PP"""" ""YY88888888888888888888b,
-                 ,d88"'__,,--------,,,,.;ZZZY8888888888888,
-                ,8IIl'"                ;;l"ZZZIII8888888888,
-               ,I88l;'                  ;lZZZZZ888III8888888,
-             ,II88Zl;.                  ;llZZZZZ888888I888888,
-            ,II888Zl;.                .;;;;;lllZZZ888888I8888b
-           ,II8888Z;;                 `;;;;;''llZZ8888888I8888,
-           II88888Z;'                        .;lZZZ8888888I888b
-           II88888Z; _,aaa,      .,aaaaa,__.l;llZZZ88888888I888
-           II88888IZZZZZZZZZ,  .ZZZZZZZZZZZZZZ;llZZ88888888I888,
-           II88888IZZ<'(@@>Z|  |ZZZ<'(@@>ZZZZ;;llZZ888888888I88I
-          ,II88888;   `""" ;|  |ZZ; `"""     ;;llZ8888888888I888
-          II888888l            `;;          .;llZZ8888888888I888,
-         ,II888888Z;           ;;;        .;;llZZZ8888888888I888I
-         III888888Zl;    ..,   `;;       ,;;lllZZZ88888888888I888
-         II88888888Z;;...;(_    _)      ,;;;llZZZZ88888888888I888,
-         II88888888Zl;;;;;' `--'Z;.   .,;;;;llZZZZ88888888888I888b
-         ]I888888888Z;;;;'   ";llllll;..;;;lllZZZZ88888888888I8888,
-         II888888888Zl.;;"Y88bd888P";;,..;lllZZZZZ88888888888I8888I
-         II8888888888Zl;.; `"PPP";;;,..;lllZZZZZZZ88888888888I88888
-         II888888888888Zl;;. `;;;l;;;;lllZZZZZZZZW88888888888I88888
-         `II8888888888888Zl;.    ,;;lllZZZZZZZZWMZ88888888888I88888
-          II8888888888888888ZbaalllZZZZZZZZZWWMZZZ8888888888I888888,
-          `II88888888888888888b"WWZZZZZWWWMMZZZZZZI888888888I888888b
-           `II88888888888888888;ZZMMMMMMZZZZZZZZllI888888888I8888888
-            `II8888888888888888 `;lZZZZZZZZZZZlllll888888888I8888888,
-             II8888888888888888, `;lllZZZZllllll;;.Y88888888I8888888b,
-            ,II8888888888888888b   .;;lllllll;;;.;..88888888I88888888b,
-            II888888888888888PZI;.  .`;;;.;;;..; ...88888888I8888888888,
-            II888888888888PZ;;';;.   ;. .;.  .;. .. Y8888888I88888888888b,
-           ,II888888888PZ;;'                        `8888888I8888888888888b,
-           II888888888'                              888888I8888888888888888b
-          ,II888888888                              ,888888I88888888888888888
-         ,d88888888888                              d888888I8888888888ZZZZZZZ
-      ,ad888888888888I                              8888888I8888ZZZZZZZZZZZZZ
-    ,d888888888888888'                              888888IZZZZZZZZZZZZZZZZZZ
-  ,d888888888888P'8P'                               Y888ZZZZZZZZZZZZZZZZZZZZZ
- ,8888888888888,  "                                 ,ZZZZZZZZZZZZZZZZZZZZZZZZ
-d888888888888888,                                ,ZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-888888888888888888a,      _                    ,ZZZZZZZZZZZZZZZZZZZZ888888888
-888888888888888888888ba,_d'                  ,ZZZZZZZZZZZZZZZZZ88888888888888
-8888888888888888888888888888bbbaaa,,,______,ZZZZZZZZZZZZZZZ888888888888888888
-88888888888888888888888888888888888888888ZZZZZZZZZZZZZZZ888888888888888888888
-8888888888888888888888888888888888888888ZZZZZZZZZZZZZZ88888888888888888888888
-888888888888888888888888888888888888888ZZZZZZZZZZZZZZ888888888888888888888888
-8888888888888888888888888888888888888ZZZZZZZZZZZZZZ88888888888888888888888888
-88888888888888888888888888888888888ZZZZZZZZZZZZZZ8888888888888888888888888888
-8888888888888888888888888888888888ZZZZZZZZZZZZZZ88888888888888888888888888888
-88888888888888888888888888888888ZZZZZZZZZZZZZZ8888888888888888888888888888888
-8888888888888888888888888888888ZZZZZZZZZZZZZZ88888888888888888888888888888888
-*/
+
 #include <iostream>
 #include <fstream>
 using namespace std;
  
 /*Definimos UNASSIGNED como 0 para marcar los espacios vacios en la matriz y 
-SAMURAI como 21 la cual sera el tamaÒo de nuestra matriz*/
+SAMURAI como 21 la cual sera el tama√±o de nuestra matriz*/
 #define UNASSIGNED 0
 #define SAMURAI 21
 
@@ -91,8 +26,8 @@ bool FindEmptyBox(int Sudoku[SAMURAI][SAMURAI],int& row, int& col, int initrow, 
 	}
     return false;
 }
-/*Funcion de printSudoku recorre la matriz y revisa los espacios en -1 en donde imprimir· dos espacios vacios
-y el resto de espacios imprimir· el valor que ahÌ se encuentre*/
+/*Funcion de printSudoku recorre la matriz y revisa los espacios en -1 en donde imprimir√° dos espacios vacios
+y el resto de espacios imprimir√° el valor que ah√≠ se encuentre*/
 void printSudoku(int Sudoku[SAMURAI][SAMURAI])
 {
     for (int row = 0; row < SAMURAI; row++)
@@ -129,7 +64,7 @@ int return_to(int i, int j){
 				return 8;
 			}else{
 				if(i >= 12){
-					return 20;                 //aqui verificamos que tan bajo esta el elemento, si est· en los sudokus inferiores devolveremos 20 como maximo
+					return 20;                 //aqui verificamos que tan bajo esta el elemento, si est√° en los sudokus inferiores devolveremos 20 como maximo
 				}else{                         //si no, devolveremos 14
 					return 14;                  
 				}
@@ -162,7 +97,7 @@ int return_from(int i, int j){
 				return 0;
 			}else{
 				if(i >= 15){
-					return 12;                          //aqui verificamos que tan bajo esta el elemento, si est· en los sudokus inferiores devolveremos 12 como minimo
+					return 12;                          //aqui verificamos que tan bajo esta el elemento, si est√° en los sudokus inferiores devolveremos 12 como minimo
 				}else{
 					return 6;                          //si no, devolveremos 6
 				}
@@ -176,7 +111,7 @@ int return_from(int i, int j){
 La funcion isValid() retorna verdadero si el elemento no se encuentra en la misma fila o columna o cuadro que un elemento similar
 -Primero acotara las verificaciones
 -despues revisara filas y columnas
--de ultimo revisar· el cuadro 
+-de ultimo revisar√° el cuadro 
 */
 bool isValid( int Sudoku[ SAMURAI ][ SAMURAI ], int row, int col, int num){
 	int a, b, x, y;
@@ -207,8 +142,8 @@ bool isValid( int Sudoku[ SAMURAI ][ SAMURAI ], int row, int col, int num){
 }
 
 /*La funcion SudokuSolution ser{a la encargada de llamar a las funciones que buscan y
-comprueban elementos y se encargar· de buscar la solucion o regresar
-si no encontrÛ soluciÛn y retornar falso
+comprueban elementos y se encargar√° de buscar la solucion o regresar
+si no encontr√≥ soluci√≥n y retornar falso
 */
 bool SudokuSolution(int Sudoku[SAMURAI][SAMURAI])
 {
@@ -248,13 +183,13 @@ bool SudokuSolution(int Sudoku[SAMURAI][SAMURAI])
     }
     
 
-    return false;     //Si no llegÛ al numero nueve y no encontro solucion retornara y volvera a buscar otra solucion hasta agotarlas
+    return false;     //Si no lleg√≥ al numero nueve y no encontro solucion retornara y volvera a buscar otra solucion hasta agotarlas
 }
  
-/*La funcion leer sudoku nos leer· el archivo y estructurar· la matriz
+/*La funcion leer sudoku nos leer√° el archivo y estructurar√° la matriz
 -solo lee los elementos y los coloca ordenadamente por dos ciclos for
--si el archivo falla retornar· falso
--si todo sale bien cerrar· el archivo y retornar· verdadero
+-si el archivo falla retornar√° falso
+-si todo sale bien cerrar√° el archivo y retornar√° verdadero
 */
 
 bool readsudoku(int Sudoku[SAMURAI][SAMURAI]){
@@ -286,7 +221,6 @@ int main()
 			cout<<"No existe Solucion"<<endl;
 		}	
 	}
-	cout<<"Elaborado por Jesus Machado C.I:28553080"<<endl;
     return 0;
 }
 /*
